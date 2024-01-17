@@ -2,23 +2,23 @@
 <html lang="en"> <!-- HTML文档的根元素 -->
   <head> 
     <meta charset="UTF-8" /> <!-- 设置文档的字符编码为UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Progress Steps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 设置视口的宽度和初始缩放级别 -->
+    <link rel="stylesheet" href="style.css" /> <!-- 引入外部CSS文件'style.css'来为网页添加样式 -->
+    <title>Progress Steps</title> <!-- 定义了网页的标题，显示在浏览器的标签页上 -->
   </head>
-  <body>
-    <div class="container">
-      <div class="progress-container">
-        <div class="progress" id="progress"></div>
-        <div class="circle active">1</div>
+  <body> <!-- 包含了网页的主要内容 -->
+    <div class="container"> <!-- 主容器，包含了整个进度条和按钮 -->
+      <div class="progress-container"> <!-- 进度条容器，包括进度指示和一系列的圆圈来表示不同的步骤 -->
+        <div class="progress" id="progress"></div> <!-- 进度条本身 -->
+        <div class="circle active">1</div> <!-- 第一个步骤的圆圈，已经被激活 -->
         <div class="circle">2</div>
         <div class="circle">3</div>
         <div class="circle">4</div>
       </div>
 
-      <button class="btn" id="prev" disabled>Prev</button>
+      <button class="btn" id="prev" disabled>Prev</button> <!-- 用于控制进度条的“Prev”和“Next”按钮 -->
       <button class="btn" id="next">Next</button>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- 引入外部JavaScript文件'script.js'，这个脚本可能包含用于控制进度条行为的逻辑 -->
   </body>
 </html>
