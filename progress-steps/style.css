@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/* 从Google Fonts导入了名为"Muli"的字体 */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
 
+/* 定义两个CSS变量，分别用于进度条填充颜色和边框颜色 */
 :root {
   --line-border-fill: #3498db;
   --line-border-empty: #383838;
 
 }
 
+/* 通配选择器，用于选择所有元素。使所有元素的宽度和高度包括内边距(padding)和边框(border)，这有助于更容易地管理布局。 */
 * {
   box-sizing: border-box;
 }
 
+/* 设置背景颜色、字体、布局方式（flex布局居中显示）、视口高度、隐藏溢出内容和边距 */
 body {
   background-color: #1f1f1f;
   font-family: 'Muli', sans-serif;
@@ -21,10 +25,12 @@ body {
   margin: 0;
 }
 
+/* 为类名为'container'的元素设置文本居中 */
 .container {
   text-align: center;
 }
 
+/* 设置进度条容器的样式，包括布局和位置 */
 .progress-container {
   display: flex;
   justify-content: space-between;
@@ -34,6 +40,7 @@ body {
   width: 350px;
 }
 
+/* 设置进度条容器的样式，包括布局和位置, '::before' 伪元素用于创建进度条背景 */
 .progress-container::before {
   content: '';
   background-color: var(--line-border-empty);
@@ -46,6 +53,7 @@ body {
   z-index: -1;
 }
 
+/* 用于进度条的样式设置，包括颜色、位置、大小和过渡效果 */
 .progress {
   background-color: var(--line-border-fill);
   position: absolute;
@@ -58,6 +66,7 @@ body {
   transition: 0.4s ease;
 }
 
+/* 为步骤指示器的圆圈设置样式 */
 .circle {
   background-color: #1f1f1f;
   color:#e2e2e2;
@@ -71,10 +80,12 @@ body {
   transition: 0.4s ease;
 }
 
+/* 改变活动步骤的边框颜色 */
 .circle.active {
   border-color: var(--line-border-fill);
 }
 
+/* 定义按钮的样式，包括背景颜色、边框、圆角、字体、大小和间距 */
 .btn {
   background-color: var(--line-border-fill);
   color: #fff;
